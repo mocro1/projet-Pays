@@ -1,33 +1,45 @@
-import { Link, useLocation } from "react-router-dom";
+import { Link, useLocation} from "react-router-dom";
 import Navbar from "../Navbar/Navbar";
+import { useState , useEffect } from "react";
 import './Country.css'
+
 
 function Country(props) {
     let poto = useLocation();
     let { el } = poto.state;
     console.log(el.name);
 
+    const [data, setData] = useState([])
+    useEffect(() => {
+        fetch('https://restcountries.com/v3.1/all')
+        .then((response) => response.json())
+        .then((data) => { setData(data) })
+        .catch((error) => console.error(error))
+        console.error("ok")
+    }, [])
 
-    // let currencies
-    // for (let key in props.paysChoisi.currencies) {
-    //   currencies=elem
-    // }
 
+    
     let propCurr;
     for (let key in el.currencies) {
         propCurr = key;
         console.log(propCurr);
     }
-    // console.log(el.currencies.name[propCurr]);
+
     
     let propLang;
     for (const key in el.languages) {
         propLang = key;
         console.log(propLang);
     }
-    console.log(el.languages[propLang]);
 
-
+    function compare_border(e, i, eldia) {
+        if (e === i) {
+            return eldia.name.common;
+        }
+        return;
+    }
+    
     return (
         <div>
 
@@ -62,8 +74,11 @@ function Country(props) {
                             </div>
                         </div>
                         <div className="bordercountry">
-                            <h4>Border Counties : {el.counties}</h4>
+                            <h4>Border Countries : <span>{el.borders ? el.borders.map((ele, index) => {return <button>{data.map((eldente, indexos) => {return compare_border(ele, eldente.cca3, eldente)})} </button>}) : ""}</span></h4>
                         </div>
+
+
+                        
                     </div>
                 </div>
             </div>

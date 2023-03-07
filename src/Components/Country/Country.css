@@ -56,3 +56,7 @@
 .spanDark{
     color: white !important;
 }
+.bordercountry button{
+    margin-left: 10px;
+    overflow: hidden;
+}

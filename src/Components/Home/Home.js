@@ -25,6 +25,8 @@ function Home(props) {
         setFiltre(filtrePays);
     }, [data, searchValue]);
 
+
+    //  ordre alphabitique _______________________
     const items = data;
     // sort by name
     items.sort((a, b) => {

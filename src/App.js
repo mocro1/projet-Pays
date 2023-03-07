@@ -1,7 +1,7 @@
 import {createBrowserRouter, RouterProvider} from "react-router-dom";
 import Home from './Components/Home/Home';
 import Country from './Components/Country/Country';
-import { useState , useEffect } from "react";
+import { useState } from "react";
 
 
 function App() {
@@ -9,11 +9,11 @@ function App() {
     const router = createBrowserRouter([
         {
             path: "/",
-            element: <Home darkmode={darkmode} setDarkmode={setDarkmode}/>,
+            element: <Home  darkmode={darkmode} setDarkmode={setDarkmode}/>,
         },
         {
             path: "/:Country",
-            element: <Country darkmode={darkmode} setDarkmode={setDarkmode}/>,
+            element: <Country  darkmode={darkmode} setDarkmode={setDarkmode}/>,
         }
         
 
