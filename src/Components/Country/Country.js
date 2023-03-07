@@ -33,9 +33,9 @@ function Country(props) {
         console.log(propLang);
     }
 
-    function compare_border(e, i, eldia) {
+    function contries_border(e, i, voisin) {
         if (e === i) {
-            return eldia.name.common;
+            return <Link to={`/${voisin.name.common}`}  state={{el:voisin}}>{voisin.name.common}</Link>
         }
         return;
     }
@@ -74,7 +74,7 @@ function Country(props) {
                             </div>
                         </div>
                         <div className="bordercountry">
-                            <h4>Border Countries : <span>{el.borders ? el.borders.map((ele, index) => {return <button>{data.map((eldente, indexos) => {return compare_border(ele, eldente.cca3, eldente)})} </button>}) : ""}</span></h4>
+                            <h4>Border Countries : <span>{el.borders ? el.borders.map((ele, index) => {return <button>{data.map((para, bata) => {return contries_border(ele, para.cca3, para)})} </button>}) : ""}</span></h4>
                         </div>
 
 
