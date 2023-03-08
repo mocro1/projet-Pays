@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/projet-Pays/static/css/main.67bbe757.css",
+    "main.js": "/projet-Pays/static/js/main.f32f9cc4.js",
+    "index.html": "/projet-Pays/index.html",
+    "main.67bbe757.css.map": "/projet-Pays/static/css/main.67bbe757.css.map",
+    "main.f32f9cc4.js.map": "/projet-Pays/static/js/main.f32f9cc4.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.67bbe757.css",
+    "static/js/main.f32f9cc4.js"
+  ]
+}
