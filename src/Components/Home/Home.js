@@ -28,7 +28,6 @@ function Home(props) {
 
     //  ordre alphabitique _______________________
     const items = data;
-    // sort by name
     items.sort((a, b) => {
         const nameA = a.name.common; // ignore upper and lowercase
         const nameB = b.name.common; // ignore upper and lowercase
@@ -38,8 +37,7 @@ function Home(props) {
         if (nameA > nameB) {
             return 1;
         }
-        console.log(items);
-        // names must be equal
+        // console.log(items);
         return 0;
     });
 
@@ -82,9 +80,6 @@ function Home(props) {
             </div>
             <div className='section2'>
             
-            {/* {filtre.map((element,index)=>{
-
-            })} */}
             {filtre.map((element, index) => {
             return(
 

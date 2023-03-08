@@ -74,7 +74,7 @@ function Country(props) {
                             </div>
                         </div>
                         <div className="bordercountry">
-                            <h4>Border Countries : <span>{el.borders ? el.borders.map((ele, index) => {return <button>{data.map((para, bata) => {return contries_border(ele, para.cca3, para)})} </button>}) : ""}</span></h4>
+                            <h4>Border Countries : <span>{el.borders ? el.borders.map((ele) => {return <button>{data.map((para) => {return contries_border(ele, para.cca3, para)})} </button>}) : ""}</span></h4>
                         </div>
 
 
